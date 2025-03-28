@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Visita</title>
+</head>
+<body>
+    <h1>Eliminar una visita</h1>
+    <p>Se eliminará la siguiente visita: {{visita.cliente}} en la dirección {{visita.direccion}}</p>
+    <div class="container mt-5">
+        <form action="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger"> Eliminar </button>
+            <a href="{% url 'listar_visitas' %}" class="btn btn-secondary">Volver a la lista de visitas</a>
+        </form>
+    </div>
+</body>
+</html></form>

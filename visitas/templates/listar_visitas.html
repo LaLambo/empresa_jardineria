@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Visitas</title>
+</head>
+    <body>
+        <h1>Lista de visitas</h1>
+        <table>
+            <tr>
+                <th>Cliente</th>
+                <th>Dirección</th>
+                <th>Tipo de servicio</th>
+                <th>Disponibilidad Horaria</th>
+                <th>Metros Cuadrados (M²)</th>
+            </tr>
+            {% for visita in visitas %}
+            <tr>
+                <td>{{ visita.cliente }}</td>
+                <td>{{ visita.direccion }}</td>
+                <td>{{ visita.tipo_servicio }}</td>
+                <td>{{ visita.fecha }}</td>
+                <td>{{ visita.disponibilidad_horaria }}</td>
+                <td>{{ visita.metros_cuadrados }}</td>  
+                <td>{{ visita.estado }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No hay visitas registradas.</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Visita</title>
+</head>
+<body>
+    <h1>Registrar una nueva visita</h1>
+    <div class="container mt-5">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="cliente">Cliente:</label>
+                <input type="text" name="cliente" id="cliente" required placeholder="Nombre del cliente">
+            </div><div class="mb-3">
+                <label for="direccion">Dirección:</label>
+                <input type="text" name="direccion" id="direccion" required placeholder="Dirección del cliente">
+            </div>
+
+            <div class="mb-3">
+                <label for="tipo_servicio">Tipo de servicio:</label>
+                <input type="text" name="tipo_servicio" id="tipo_servicio" required placeholder="Tipo de servicio">
+            </div>
+            <div class="mb-3">
+                <label for="metros_cuadrados">Metros Cuadrados:</label>
+                <input type="text" name="metros_cuadrados" id="metros_cuadrados" required placeholder="Metros cuadrados (M²)">
+            </div>
+            <div class="mb-3">
+                <label for="fecha">Fecha:</label>
+                <input type="text" name="fecha" id="fecha" required placeholder="Fecha">
+            </div>
+            <div class="mb-3">
+                <label for="disponibilidad_horaria">Disponibilidad Horaria:</label>
+                <input type="text" name="disponibilidad_horaria" id="disponibilidad_horaria" required placeholder="Disponibilidad horaria">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Visita</button>
+            <a href="{% url 'listar_visitas' %}" class="btn btn-secondary">Volver a la lista de visitas</a>
+        </form>
+    </div>
+</body>
+</html></form>
